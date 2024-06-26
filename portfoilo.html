@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .header-text {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .header-text h1 {
+            margin-bottom: 10px;
+        }
+        .header-text h6 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .main-section, .about, .services, .portfolio, .contact, .footer {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+
+       .column {
+        flex: 1;
+        padding: 10px;
+        margin: 10px;
+        text-align: center; /* Center image */
+       }
+
+        .about img {
+        max-width: 100%; /* Maximum width of container */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-height: 300px; /* Example maximum height */
+    }
+
+        }
+        .sub-title {
+            color: #8FCB9B;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .tab-titles {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab-links {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        .active-link {
+            border-bottom: 2px solid #4CAF50;
+        }
+        .tab-contents {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .services-list, .work-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .services-list div, .work-list .work {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .services-list i, .work-list i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .contact-left {
+            text-align: left;
+        }
+        .contact-left h1, .contact-left p {
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            color: #333;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        .social-icons a:hover {
+            color: #4CAF50;
+        }
+        .btn2 {
+            background-color: #333;
+            margin-top: 20px;
+        }
+        .btn2:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student of LakkiReddy BaliReddy College of Engineering</h1>
+    </header>
+    <nav>
+        <a href="#header">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="header-text">
+            <h6>Hello, I'm <span>Sathwika Ontipuli</span></h6>
+            <h2>From Andhra Pradesh, India</h2>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about" class="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <div class="row">
+                <div class="column">
+                    <img src="C:\Users\sathw\OneDrive\Desktop\image.jpg.jpeg" alt="User Image">
+                </div>
+                <div class="column">
+                    <p class="para">.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Certifications')">Certifications</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Technical Skills</span>: C, C++, Python, HTML & CSS, JavaScript, Data Structures, SQL</li>
+                            <li><span>Soft skills</span>: Communication Skills, Team Work, Time Management, Critical thinking</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022-Present:</span><br>B-Tech at LakkiReddy BalliReddy College of engineer</li>
+                            <li><span>2020-2022</span><br>Intermediate at Sri Gayatri Jr. College, Gollapudi</li>
+                            <li><span>2019-2020</span><br>SSC Board at Narayana Olympaid, Kannuru</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Certifications">
+                        <ul>
+                            <li><span>NPTEL:</span><br>Internet Of Things</li>
+                            <li><span>IBM:</span><br>Artifial Inteligence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------work------------>   
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="C:\Users\sathw\OneDrive\Desktop\supermarket.jpg" alt="Super Market Management System">
+                    <div class="layer">
+                        <h3>Super Market Management System</h3>
+                        <p>A C-based Supermarket Management System handles inventory, sales, transactions, and employee tasks, including product management, sales processing, reporting, and user accounts.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="C:\Users\sathw\OneDrive\Desktop\Movie Recommender.jpg" alt="Movie Recommender">
+                    <div class="layer">
+                        <h3>Movie Recommender</h3>
+                        <p>A movie recommender in C++ suggests films based on user preferences for an enhanced viewing experience.</p>
+                        <a href="https://github.com/sathwika5151/sathwika_ontipuli/blob/main/README.md#movies-recommender" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="C:\Users\sathw\OneDrive\Desktop\Mathematical Evaluation.png" alt="Mathematical Evaluation">
+                    <div class="layer">
+                        <h3>Mathematical Evaluation</h3>
+                        <p>In C, mathematical evaluation with data structures efficiently computes complex expressions for accuracy and performance</p>
+                        <a href="https://github.com/Neeharikavasadi/Mathematical-evaluation-.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/sathwika5151" target="_blank" class="btn btn-center">See More</a>
+        </div>
+    </div>
+    <!--------contact----------->
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="column contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> sathwikaontipuli@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 7013672699</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/.sathwika._?igsh=MWllbG1vMzV4aXVwNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sathwika -ontipuli-b885a1298" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/resume AP22110011070.pdf" download class="btn btn2" target="_blank">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
